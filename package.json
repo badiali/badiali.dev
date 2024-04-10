@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "badiali.dev",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,6 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.5.18"
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/inter-tight": "^5.0.20",
+    "astro": "^4.5.18",
+    "tailwindcss": "^3.4.3"
   }
 }
