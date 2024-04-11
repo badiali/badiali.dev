@@ -1,28 +1,101 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import SectionContainer from "../components/SectionContainer.astro";
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
 ---
 
 <Layout title="Luis Badiali | Diseño y Desarrollo Web UX/UI">
-  <main>
-    <SectionContainer>
-      <img
-        class="rounded-full size-20 mb-6 border-2 border-white"
-        src="/src/images/luis-badiali.webp"
-        alt="Foto de Luis Badiali"
-      />
-      <h1
-        class="flex items-center gap-x-4 text-5xl font-bold text-neutral-800 mb-4"
-      >
-        Hola, soy Luis Badiali <a
-          href="https://www.linkedin.com/in/badiali"
-          target="_blank"
-          rel="noopener"
-          class="flex"><Badge>Con nuevas metas</Badge></a
-        >
-      </h1>
-      <h2 class="text-2xl">Diseñador y Desarrollador Web UX/UI</h2>
-    </SectionContainer>
-  </main>
+	<main class="w-full">
+		<section
+			class="cover-section flex items-center justify-start relative overflow-x-hidden w-full min-h-[600px] from-secondary to-secondary"
+		>
+			<div class="container mx-auto lg:max-w-4xl">
+				<div class="max-w-2xl">
+					<figure class="flex items-center gap-4 mb-6">
+						<img
+							class="rounded-full size-20"
+							src="/src/images/luis-badiali.webp"
+							alt="Foto de Luis Badiali"
+						/>
+						<a
+							href="https://www.linkedin.com/in/badiali"
+							target="_blank"
+							rel="noopener"
+							class="flex"><Badge>Con nuevas metas</Badge></a
+						>
+					</figure>
+					<h1
+						class="flex flex-wrap items-center gap-x-4 text-5xl font-bold text-neutral-800 mb-4"
+					>
+						Hola, soy <span class="whitespace-nowrap"
+							>Luis Badiali</span
+						>
+					</h1>
+					<p class="text-2xl">
+						Diseñador y Desarrollador Web UX/UI que combina arte y
+						tecnología para crear experiencias digitales únicas.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="grid-bg relative w-full from-neutral-200/75">
+			<div class="container py-40 mx-auto lg:max-w-4xl">
+				<h2 class="text-3xl font-bold text-neutral-800 mt-8 mb-4">
+					¿Quién soy?
+				</h2>
+				<p class="text-lg text-neutral-700">
+					Soy un apasionado por la tecnología y el diseño. Me encanta
+					crear productos digitales que sean útiles y atractivos para
+					los usuarios. Tengo experiencia en diseño y desarrollo web
+					UX/UI, y me gusta trabajar en proyectos desafiantes que
+					requieran creatividad y atención al detalle.
+				</p>
+			</div>
+		</section>
+	</main>
 </Layout>
+
+<style>
+	.cover-section::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0%;
+		bottom: 10%;
+		left: -25%;
+		width: 150%;
+		background: linear-gradient(
+			83.21deg,
+			var(--tw-gradient-from) 0%,
+			var(--tw-gradient-to) 100%
+		);
+		mask-image: radial-gradient(rgba(0, 0, 0, 0.8), transparent 70%);
+	}
+	.grid-bg::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+				to right,
+				var(--tw-gradient-from) 1px,
+				transparent 1px
+			),
+			linear-gradient(
+				to bottom,
+				var(--tw-gradient-from) 1px,
+				transparent 1px
+			);
+		background-size: 2rem 2rem;
+		mask-image: linear-gradient(
+			to bottom,
+			transparent,
+			10%,
+			white,
+			90%,
+			transparent
+		);
+	}
+</style>
