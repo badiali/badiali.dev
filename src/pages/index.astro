@@ -4,9 +4,9 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Luis Badiali | Design Systems & Frontend Dev">
 	<main
-		class="size-full flex items-center justify-center relative z-10 overflow-hidden"
+		class="relative size-full flex items-center justify-center overflow-hidden"
 	>
-		<div class="flex flex-col items-center gap-8">
+		<div class="relative z-10 flex flex-col items-center gap-8">
 			<img
 				class="max-md:w-[250px] w-[300px]"
 				src="/assets/img/LuisBadiali.svg"
@@ -22,19 +22,11 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 		<img
 			id="draggable-logo"
-			class="absolute max-md:top-[20px] max-md:right-[20px] max-[1199px]:top-[30px] max-[1199px]:right-[30px] min-[1200px]:top-[100px] min-[1200px]:right-[100px] min-[1440px]:top-[130px] min-[1440px]:right-[130px] w-[150px] h-[150px] max-md:w-[100px] max-md:h-[100px] max-lg:w-[120px] max-lg:h-[120px] cursor-[url('/assets/img/badialiMouse.svg'),_auto] select-none"
+			class="absolute z-10 top-[20px] right-[20px] md:top-[30px] md:right-[30px] xl:top-[60px] xl:right-[60px] w-[150px] h-[150px] max-md:w-[100px] max-md:h-[100px] max-lg:w-[120px] max-lg:h-[120px] cursor-[url('/assets/img/badialiMouse.svg'),_auto] select-none"
 			draggable="false"
 			src="/assets/img/logoNodes.svg"
 			alt="Luis Badiali | Design Systems & Frontend Dev"
 		/>
-		<video
-			src="https://res.cloudinary.com/badiali/video/upload/v1771874675/gcfcciwxjkqipc68x5er.mp4"
-			autoplay
-			loop
-			muted
-			playsinline
-			class="absolute w-full h-full -z-10 object-cover object-right opacity-60 blur-[80px] max-md:-top-[120px] max-md:-right-[50px] max-lg:-top-[220px] max-lg:-right-[150px]"
-		></video>
 	</main>
 </Layout>
 
