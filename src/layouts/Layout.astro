@@ -22,26 +22,9 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body
-		class="size-full relative w-full from-neutral-200/75 text-neutral-800 bg-transparent"
+		class="size-full relative w-full from-neutral-200/75 text-neutral-800 bg-[#F5F4EF]"
 	>
 		<slot />
-		<div
-			class="absolute inset-0 -z-1 h-full w-full pointer-events-none opacity-[0.4] blur-[0.5px]"
-			style={`background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise-filter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.80' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='0.46'/%3E%3CfeFuncG type='linear' slope='0.46'/%3E%3CfeFuncB type='linear' slope='0.46'/%3E%3CfeFuncA type='linear' slope='0.49'/%3E%3C/feComponentTransfer%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='2.43' intercept='-0.72'/%3E%3CfeFuncG type='linear' slope='2.43' intercept='-0.72'/%3E%3CfeFuncB type='linear' slope='2.43' intercept='-0.72'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise-filter)'/%3E%3C/svg%3E");`}
-		>
-		</div>
-		<video
-			src="https://res.cloudinary.com/badiali/video/upload/v1771882697/h0aejl0v8p0niafavrj1.mp4"
-			autoplay
-			loop
-			muted
-			playsinline
-			class="absolute -z-5 top-[-300px] right-[-100px] md:top-[-450px] md:right-[-250px] xl:top-[-300px] xl:right-[-150px] w-[600px] h-[600px] md:w-[900px] md:h-[900px] opacity-70 blur-[80px] xl:blur-[140px] object-contain"
-		></video>
-		<div
-			class="absolute inset-0 -z-10 h-full w-full opacity-40 bg-[size:1.5rem_1.5rem] bg-[linear-gradient(to_right,var(--tw-gradient-from)_1px,transparent_1px),linear-gradient(to_bottom,var(--tw-gradient-from)_1px,transparent_1px)]"
-		>
-		</div>
 	</body>
 </html>
 
